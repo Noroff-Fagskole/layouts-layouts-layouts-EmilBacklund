@@ -1,0 +1,136 @@
+:root {
+  --brand-dark-gray: #f0f0f0;
+  --brand-light-gray: #f6f6f6;
+  --brand-turquoise: #c5f5fa;
+  --brand-black: #000000;
+  --brand-red: #ff5b5a;
+  --brand-white: #fff;
+  --container-width: 1170px;
+  --gutter: 20px;
+  --gutter-sml: 10px;
+  --default-font-family: 'Open Sans', sans-serif;
+}
+
+.body {
+  background-color: var(--brand-white);
+  font-family: var(--default-font-family);
+}
+
+img {
+  width: 100%;
+}
+
+.app-header {
+  background-color: var(--brand-light-gray);
+  padding: var(--gutter);
+}
+
+.app-header .row:nth-child(1),
+.app-header .row:nth-child(2) {
+  padding-bottom: var(--gutter);
+}
+
+.app-header .row:nth-child(3) {
+  padding-bottom: var(--gutter-sml);
+}
+
+a:link,
+a:visited {
+  color: var(--brand-black);
+  text-decoration: none;
+}
+
+.flex-it {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.product.flex-it .column,
+.product-description.flex-it .column {
+  flex-basis: 50%;
+}
+
+.product-description .column {
+  min-height: 444px;
+}
+
+.product-description .column:nth-child(2) {
+  background-color: var(--brand-turquoise);
+}
+
+.account-nav li,
+.main-navigation li,
+.bread-crumb li,
+.product-nav li {
+  display: inline-block;
+}
+
+.account-nav ul,
+.main-navigation ul,
+.bread-crumb ol,
+.product-nav ul {
+  list-style: none;
+}
+
+.app-body {
+  background-color: var(--brand-white);
+}
+
+.bread-crumb {
+  padding: var(--gutter);
+}
+
+.bread-crumb li:after {
+  content: '>';
+  padding-left: var(--gutter-sml);
+  padding-right: var(--gutter-sml);
+}
+
+.product .column:nth-child(2) {
+  background-color: var(--brand-turquoise);
+}
+
+.bread-crumb li:last-child:after {
+  content: '';
+}
+
+.app-footer {
+  background-color: var(--brand-black);
+}
+
+.search-form {
+  position: relative;
+}
+
+.search-form label {
+  display: none;
+}
+
+.search-form button {
+  position: absolute;
+  top: var(--gutter-sml);
+  left: var(--gutter-sml);
+}
+
+.search-form input {
+  width: 100%;
+  padding: var(--gutter-sml);
+  padding-left: 80px;
+  border: 1px solid var(--brand-light-gray);
+}
+
+.logo {
+  width: 122px;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .flex-it {
+    flex-direction: row;
+  }
+}
